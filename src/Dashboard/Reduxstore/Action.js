@@ -1,0 +1,13 @@
+export const OPEN = "OPEN";
+export const CLOSE = "CLOSE";
+export const OPEN_ADD = "OPEN_ADD";
+export const CLOSE_ADD = "CLOSE_ADD";
+export const CLOSE_SIDEBAR = "CLOSE_SIDEBAR";
+export const OPEN_SIDEBAR = "OPEN_SIDEBAR";
+export const FETCHCOUPONSDATA = "FETCHCOUPONSDATA";
+export const CATEGORYDATA = "CATEGORYDATA";
+export const PRODUCTDATA = "PRODUCTDATA";
+export const ORDERDATA = "ORDERADATA";
+export const CUSTOMERDATA = "CUSTOMERDATA";
+export const COUPONPUTAPI = "COUPONPUTAPI";
+export const EDIT = "EDIT";

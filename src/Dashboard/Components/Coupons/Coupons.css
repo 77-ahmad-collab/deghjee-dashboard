@@ -1,0 +1,11 @@
+.rem_coup {
+  width: 90%;
+  margin: auto;
+  height: 5px;
+  border-radius: 10px;
+}
+.color_coup {
+  background-color: rgb(56, 245, 56);
+  height: 6px;
+  border-radius: 10px;
+}

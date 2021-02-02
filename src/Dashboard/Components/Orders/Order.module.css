@@ -1,0 +1,94 @@
+.setwidth {
+  background-color: white;
+  height: 420px;
+  width: 95%;
+  margin: auto;
+  overflow-y: scroll;
+}
+.order_table {
+  padding: 0%;
+}
+.order_table tbody {
+  border: 3px solid red;
+}
+.order_table td {
+  text-align: left;
+}
+.check {
+  border: 4px solid greenyellow;
+}
+.loadordertab {
+  position: relative;
+}
+.loaderleft {
+  position: absolute;
+  top: 50px;
+  left: 400px;
+}
+@media screen and (max-width: 992px) {
+  .loaderleft {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .loaderleft {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .loaderleft {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .loaderleft {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+  }
+}
+/* .order_table {
+  background-color: white;
+}
+.order_table th {
+  text-align: left;
+} */
+/* .order_table thead {
+  overflow-x: scroll !important;
+  border: 2px solid red;
+}
+.order_table tbody {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  overflow-y: scroll;
+}
+
+.order_table tbody {
+  display: block;
+  width: 100%;
+  height: 350px !important; /* Just for the demo        
+  overflow-y: scroll !important; /* Trigger vertical scroll     
+  overflow-x: auto; /* Hide the horizontal scroll 
+}
+.order_table thead,
+.order_table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too 
+}
+.order_table tbody td {
+  padding-left: 20px !important;
+}
+.order_table thead {
+  border-bottom: none;
+  width: calc(
+    100%-300px
+  ); /* scrollbar is average 1em/16px width, remove it from thead width 
+} */

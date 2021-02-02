@@ -1,0 +1,82 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+.add_input {
+  font-weight: bold;
+  padding: 10px 5px;
+  height: 40px;
+
+  border-radius: 0px !important;
+  background-color: whitesmoke;
+}
+.add_input:focus {
+  outline: 2px solid rgb(50, 255, 50) !important;
+  border: none !important;
+  background-color: whitesmoke;
+}
+.addselect {
+  height: 50px;
+  background-color: whitesmoke;
+  border: #00c58d;
+  font-weight: bold;
+  padding-left: 3px;
+  width: 100%;
+}
+.addselect:focus {
+  border: 3px solid #00c58d;
+  outline: none;
+}
+.formdetails {
+  width: 100%;
+  height: 450px;
+  overflow-y: scroll;
+  display: flex;
+}
+.leftcol {
+  width: 40%;
+}
+.rightcol {
+  width: 60%;
+  background-color: white;
+  height: 100%;
+
+  overflow-y: scroll;
+}
+.textarea {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #ccc;
+  outline: none;
+}
+.textarea:focus {
+  border: 3px solid #00c58d;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .add_input {
+    width: 95%;
+    margin: auto;
+  }
+  .addselect {
+    width: 95%;
+    margin-left: 10px;
+  }
+  .formdetails {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  }
+  .rightcol,
+  .leftcol {
+    width: 100%;
+  }
+  .rightcol {
+    height: 300px;
+  }
+  .textarea {
+    width: 95%;
+    margin-left: 10px;
+  }
+}

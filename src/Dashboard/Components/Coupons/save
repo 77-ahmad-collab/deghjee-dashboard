@@ -1,0 +1,162 @@
+import React, { useRef, useState } from "react";
+import Coupondata from "./Couponsdata";
+import "./Coupons.css";
+import { connect } from "react-redux";
+import Createcompaign from "./Createcompaign";
+const Coupons = ({ add }) => {
+  const [couponsdata, setcouponsdata] = useState(Coupondata);
+  const [couponsdata2, setcouponsdata2] = useState(Coupondata);
+  const [value, setvalue] = useState("");
+  const [testdata, settestdata] = useState([]);
+  const refcont = useRef(null);
+
+  // console.log(value);
+  const names = Coupondata.map((val) => {
+    const { compaignsname } = val;
+    return compaignsname;
+  });
+  // console.log(names);
+  let filterednames = names.filter((name) => {
+    return name.toUpperCase().includes(value.toUpperCase());
+  });
+
+  ///-----------start of 2nd logic
+  let fil = couponsdata2.filter((val) => {
+    const newarr = val.compaignsname;
+    return val.compaignsname === value;
+  });
+  ////////---ed of logic
+  const handleinput = (e) => {
+    setvalue(e.target.value);
+    // let specific = Object.assign({}, filterednames);
+    console.log(refcont);
+    ///------------------end of first logic
+    ///-----------start of 2nd logic
+    // console.log(fil, "i am fil");
+    ////end of 2nd logic
+    // console.log(specific, "i am specific");
+    // filterednames.filter((val) => {
+    //   // console.log(val, "i am val");
+    //   return val;
+    // });
+    // settestdata(
+    //   filterednames.map((val) => {
+    //     return val;
+    //   })
+    // );
+    // console.log(testdata, "i am test data");
+    // setcouponsdata2(
+    //   couponsdata2.filter((val) => {
+    //     const newarr = val.compaignsname;
+    //     return console.log(newarr, filterednames);
+    //   })
+    // .map((state) => {
+    //   console.log(state, "i am state");
+    //   return state;
+    // })
+    // );
+    // console.log(filterednames, "i am filtered");
+    // console.log(couponsdata2, "this will actual data");
+
+    // settestdata(couponsdata2);
+  };
+
+  return (
+    //start of main body
+    <div className="setbody category_body container-fluid pb-5  ">
+      {/* start of first box */}
+      <div className="row header_body body_head d-flex justify-content-around align-items-center py-3">
+        <div className=" py-4 ml-4">
+          <h3>Campaigns</h3>
+        </div>
+        <div className="select_box">
+          <select className="select" id="inputGroupSelect04">
+            <option selected>Status</option>
+            <option value="active">Active</option>
+            <option value="revoked">Revoked</option>
+          </select>
+        </div>
+
+        <div className="">
+          <form>
+            <input
+              type="text"
+              className="form-control cat_input"
+              placeholder="EX: Search By Name"
+              aria-label="Large"
+              aria-describedby="inputGroup-sizing-sm"
+              onChange={handleinput}
+              value={value}
+            ></input>
+          </form>
+        </div>
+        <div className="">
+          <button className="add_catbtn" onClick={add}>
+            Create Compaigns
+          </button>
+        </div>
+      </div>
+      {/* end of first box */}
+      {/* start of 2nd box */}
+      <div className="row setwidth">
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Coupon Name</th>
+              <th>Code</th>
+              <th> Remaining Coupon</th>
+              <th>Expiration Date</th>
+              <th>Create Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {couponsdata.map((val) => {
+              const {
+                id,
+                compaignsname,
+                code,
+                remainingcoupon,
+                totalcoupon,
+                expirationdate,
+                creationdate,
+              } = val;
+              return (
+                <tr ref={refcont}>
+                  <td>{id}</td>
+                  <td>{compaignsname}</td>
+                  <td>{code}</td>
+                  <td>
+                    <div className="rem_coup">
+                      <div
+                        className="color_coup"
+                        style={{
+                          width: `${(remainingcoupon / totalcoupon) * 100}%`,
+                        }}
+                      ></div>
+                    </div>
+                    <br />
+                    {`${remainingcoupon} of ${totalcoupon} codes remaining`}
+                  </td>
+                  <td>{expirationdate}</td>
+                  <td>{creationdate}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      {/* end of 2nd box */}
+      <Createcompaign />
+    </div>
+  );
+};
+function mapStateToProps({ slider: { showslider } }) {
+  return {
+    myshowslider: showslider,
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return { add: () => dispatch({ type: "OPEN" }) };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Coupons);

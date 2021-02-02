@@ -1,0 +1,20 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+.setbody {
+  margin-left: 22% !important;
+  margin-top: 110px;
+  overflow-x: hidden !important;
+  z-index: -1;
+
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .setbody {
+    height: 100% !important;
+    margin-left: 0%;
+    width: 100%;
+  }
+}

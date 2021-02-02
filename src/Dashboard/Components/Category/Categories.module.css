@@ -1,0 +1,391 @@
+/* .input_cat {
+  width: 300px !important;
+  font-weight: bold;
+  padding: 10px 5px;
+  height: 57px;
+  margin-left: 5px;
+  border-radius: 0px !important;
+  background-color: whitesmoke;
+}
+.input_cat:focus {
+  outline: 2px solid rgb(50, 255, 50) !important;
+  border: none !important;
+  background-color: whitesmoke;
+}
+.add_catbtn {
+  background-color: #00c58d;
+  padding: 10px;
+  border: none;
+  margin: 0px 20px;
+  height: 50px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+}
+.add_catbtn:focus {
+  outline: none;
+}
+.category_body {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  width: 78%;
+}
+.category_type {
+  background-color: white;
+  width: max-content !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95% !important;
+  margin: auto;
+}
+.cat_form {
+  display: flex;
+  align-items: center;
+} */
+.category_body {
+  background-color: whitesmoke;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 78%;
+}
+.table_cat {
+  width: 95% !important;
+  margin: auto;
+  background-color: white;
+  position: relative;
+
+  /* overflow-x: scroll; */
+  height: 450px;
+}
+.table_cat tbody {
+  display: block;
+  width: 100%;
+  height: 350px !important; /* Just for the demo          */
+  overflow-y: scroll !important; /* Trigger vertical scroll    */
+  overflow-x: hidden; /* Hide the horizontal scroll */
+}
+.table_cat thead,
+.table_cat tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too */
+}
+.table_cat tbody td {
+  padding-left: 20px !important;
+}
+.table_cat thead {
+  border-bottom: none;
+  width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.myborder {
+  border: 4px solid red;
+  width: 100% !important;
+}
+.table p {
+  font-weight: bold;
+  color: #30475e;
+  font-size: 20px;
+  align-items: center;
+  padding-top: 10px;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+.setitem {
+  border: 3px solid green;
+  text-align: center;
+}
+.body_head {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+}
+.add_catbtn {
+  background-color: #00c58d;
+  padding: 10px;
+  border: none;
+  margin: 0px 20px;
+  height: 50px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+}
+.add_catbtn:focus {
+  outline: none;
+}
+.select {
+  width: 200px !important;
+  height: 50px;
+  background-color: whitesmoke;
+  border: #00c58d;
+  font-weight: bold;
+  padding-left: 3px;
+}
+.select:focus {
+  border: 3px solid #00c58d;
+  outline: none;
+}
+.cat_input {
+  font-weight: bold;
+  padding: 10px 5px;
+  height: 50px;
+
+  border-radius: 0px !important;
+  background-color: whitesmoke;
+}
+.cat_input:focus {
+  outline: 2px solid rgb(50, 255, 50) !important;
+  border: none !important;
+  background-color: whitesmoke;
+}
+.addproducts {
+  z-index: 3;
+  background-color: whitesmoke;
+  height: 100%;
+
+  width: 79%;
+  position: fixed;
+  top: 0px;
+  box-shadow: 0px 0px 3px #232931;
+  overflow-x: hidden;
+  overflow-y: hidden !important;
+
+  opacity: 1 !important;
+}
+.addproducts_header {
+  padding: 20px;
+}
+.addform_heading {
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  margin-left: 0% !important;
+}
+.addproducts_form {
+  height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.footer_slider {
+  background-color: white;
+  height: 100px !important;
+  align-items: center;
+  margin-bottom: 0px !important;
+  display: flex;
+  justify-content: center;
+}
+.sliderclose {
+  font-size: 25px;
+  position: absolute;
+  top: -15px;
+  right: 0px;
+}
+.sliderclose:hover {
+  color: #00c58d;
+}
+.hideslider {
+  transform: translateX(1200px);
+
+  transition: all 1s;
+}
+.showslider {
+  transform: translateX(130px);
+
+  transition: all 1s;
+}
+.hideaddslider {
+  transform: translateX(1600px);
+
+  transition: all 1s;
+}
+.showaddslider {
+  transform: translateX(272px);
+  width: 50% !important;
+
+  transition: all 1s;
+}
+.op {
+  opacity: 0.5 !important;
+}
+/* modal styling start heere */
+.modalbody {
+  background-color: white;
+
+  position: absolute;
+  top: 30%;
+  left: 36%;
+  width: 32%;
+
+  z-index: 4;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  /* background-color "white",
+      padding: "20px",
+      position: "absolue",
+      top: "0%",
+      left: "30%",
+      border: "3px solid red",
+      zIndex: 3, */
+}
+.headingmo {
+  border-bottom: 1px solid rgb(194, 192, 192);
+}
+.showmodal {
+  transform: translateY(0px);
+  transition: all 0.5s;
+}
+.hidemodal {
+  transform: translateY(-700px);
+  transition: all 0.5s;
+}
+.innermodal {
+  padding: 5px;
+}
+.innermodal .input {
+  border: none;
+  /* outline: 2px solid #30475e; */
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 3px;
+  border: 2px solid #30475e;
+  border-radius: 3px;
+}
+.innermodal .input:focus {
+  outline: none;
+}
+.foo {
+  border: 3px solid red;
+}
+/* modal styling ends here */
+@media screen and (min-width: 1200px) {
+  .showaddslider {
+    transform: translateX(432px);
+    width: 68% !important;
+
+    transition: all 1s;
+  }
+  .showslider {
+    width: 68% !important;
+    transform: translateX(135px);
+  }
+  .category_body {
+    overflow-y: hidden !important;
+  }
+  .opacitycatfix {
+    border: 3px solid red;
+    position: absolute;
+    left: -30px;
+    height: 100%;
+    z-index: 4;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .setbody {
+    margin-left: 0% !important;
+    width: 100%;
+  }
+  .showaddslider {
+    transform: translateX(0px);
+    width: 100% !important;
+
+    transition: all 1s;
+  }
+  .select {
+    width: 150px !important;
+  }
+  .add_catbtn {
+    width: 240px;
+  }
+  .addproducts {
+    width: 100%;
+  }
+  .showslider {
+    transform: translateX(-7px);
+  }
+  .category_body {
+    margin-left: 0% !important;
+    width: 100%;
+  }
+  .modalbody {
+    width: 40%;
+    left: 32%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cat_input {
+    width: 170px !important;
+  }
+  .add_catbtn {
+    width: 170px;
+  }
+  .modalbody {
+    width: 43%;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_body {
+    display: block !important;
+  }
+
+  .addproducts {
+    width: 100% !important;
+  }
+  .select {
+    width: 90% !important;
+    margin: 20px;
+  }
+  .cat_input {
+    box-sizing: border-box;
+    width: 90% !important;
+    margin: 20px;
+  }
+  .add_catbtn {
+    width: 90%;
+    margin: 20px;
+  }
+  .addform_heading {
+    width: 90% !important;
+    margin: 20px 0px;
+    margin-left: 10px !important ;
+  }
+  .modalbody {
+    width: 46%;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .modalbody {
+    width: 50%;
+    left: 24%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .modalbody {
+    width: 70%;
+    left: 17%;
+  }
+}
+@media screen and (max-width: 390px) {
+  .modalbody {
+    width: 86%;
+    left: 7%;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .body_head {
+    margin-top: 80px;
+  }
+}

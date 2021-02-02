@@ -1,0 +1,125 @@
+.menubar_body {
+  /* border: 2px solid green; */
+  box-shadow: 0 6px 5px -8px black;
+  height: 110px;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 2;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.notification_icon {
+  position: relative;
+  padding-top: 5px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top: 37%;
+  right: 15%;
+}
+.popup {
+  position: absolute;
+  right: 30px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  width: 350px;
+  background-color: white;
+}
+.pophead {
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+.popbody {
+  border-bottom: 1px solid rgb(129, 129, 129);
+}
+.add_menubtn {
+  background-color: #00c58d;
+  padding: 10px;
+  border: none;
+  margin: 0px 20px;
+  height: 50px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+}
+.add_menubtn:focus {
+  outline: none;
+}
+.opacityfix {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: #9c9c9c;
+  top: 0%;
+  left: -0px;
+  opacity: 0.6;
+
+  z-index: 3;
+  transform: translateX(1600px);
+  transition: all 1s;
+}
+@media screen and (max-width: 1200px) {
+  .logo {
+    visibility: hidden;
+  }
+  .sidebar {
+    background-color: white;
+    width: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .add_menubtn {
+    width: 150px;
+    margin-right: 20%;
+  }
+
+  .logo {
+    width: 0%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sidebar {
+    transform: translateX(0px) !important;
+  }
+  .hideopacity {
+    transform: translateX(1600) !important;
+    transition: all 1s;
+    display: none;
+  }
+  .showopacity {
+    transform: translateX(3px);
+    transition: all 1s;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hideopacity {
+    transform: translateX(1600) !important;
+    transition: all 1s;
+    display: none;
+  }
+  .showopacity {
+    transform: translateX(3px);
+    transition: all 1s;
+  }
+  .modalbody {
+    left: 30%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .modalbody {
+    left: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modalbody {
+    left: 20%;
+    width: 60%;
+  }
+}

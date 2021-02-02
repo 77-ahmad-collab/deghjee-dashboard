@@ -1,0 +1,68 @@
+.setting_body {
+  margin-left: 22% !important;
+  margin-top: 105px;
+  overflow-x: hidden !important;
+  z-index: -1;
+
+  height: 170% !important;
+}
+.setting_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.single_settingbox {
+  background-color: white;
+  margin: 10px;
+  width: 500px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  height: 150px;
+}
+.setting_icon {
+  font-size: 5rem;
+  margin-left: 0% !important;
+  color: rgb(0, 197, 141);
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+.content {
+  padding: 10px;
+  margin-top: 10px;
+}
+.content h3 {
+  color: rgb(0, 197, 141);
+  font-weight: 700;
+}
+@media screen and (max-width: 1400px) {
+  .single_settingbox {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .setting_body {
+    margin-left: 0% !important;
+    width: 100%;
+    justify-content: start;
+  }
+  .single_settingbox {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .single_settingbox {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .single_settingbox {
+    width: 100%;
+  }
+  .setting_box {
+    overflow-y: scroll;
+  }
+}

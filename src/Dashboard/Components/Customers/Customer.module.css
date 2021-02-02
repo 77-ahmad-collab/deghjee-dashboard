@@ -1,0 +1,28 @@
+.cus_input {
+  font-weight: bold;
+  padding: 10px 5px;
+  height: 50px;
+  width: 500px;
+  margin-left: 0px !important;
+  border-radius: 0px !important;
+  background-color: whitesmoke;
+}
+.cus_input:focus {
+  outline: 2px solid rgb(50, 255, 50) !important;
+  border: none !important;
+  background-color: whitesmoke;
+}
+.cust_img {
+  border-radius: 50%;
+}
+@media screen and (max-width: 992px) {
+  .cus_input {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cus_input {
+    width: 90%;
+    margin: 20px !important;
+  }
+}
